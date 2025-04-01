@@ -41,6 +41,9 @@ importers:
       react-dom:
         specifier: latest
         version: 19.0.0(react@19.0.0)
+      sql:
+        specifier: ^0.78.0
+        version: 0.78.0
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
@@ -547,6 +550,9 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
+  lodash@4.1.0:
+    resolution: {integrity: sha512-B9sgtKUlz0xe7lkYb80BcOpwwJJw5iOiz4HkBDzF0+i5nJLiwfBnL08m7bBkCOPBfi+0aqvrJDMdZDfAvs8vYg==}
+
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
@@ -784,9 +790,15 @@ packages:
   simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
 
+  sliced@0.0.5:
+    resolution: {integrity: sha512-9bYT917D6H3+q8GlQBJmLVz3bc4OeVGfZ2BB12wvLnluTGfG6/8UdOUbKJDW1EEx9SZMDbjnatkau5/XcUeyOw==}
+
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
+
+  sql@0.78.0:
+    resolution: {integrity: sha512-+If27aF3UQxmnuF5JgTJKd/X6TiELa1f58Zo5TX9ULbPnqs1fBDODwwbtU0WwM5H3lSiwx2En4m2lB1rCoIhvQ==}
 
   streamsearch@1.1.0:
     resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
@@ -1301,6 +1313,8 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
+  lodash@4.1.0: {}
+
   lru-cache@10.4.3: {}
 
   merge2@1.4.1: {}
@@ -1516,7 +1530,14 @@ snapshots:
       is-arrayish: 0.3.2
     optional: true
 
+  sliced@0.0.5: {}
+
   source-map-js@1.2.1: {}
+
+  sql@0.78.0:
+    dependencies:
+      lodash: 4.1.0
+      sliced: 0.0.5
 
   streamsearch@1.1.0: {}
 
